@@ -4,6 +4,7 @@ npm
 yarn (optional but recommended)
 react-native
 expo-cli
+typescript
 
 And the npm dependencies will show in `packages.json`!
 
@@ -14,20 +15,20 @@ A user can create multiple notes, as well as notebooks.
 Each note will be a document storing either tabular data (similar to excel) or markdown documents.
 
 ## Stack description
-We will be using **react native** (frontend) to develop a cross-platform app supported by a **flask** (backend) with **postgres** (database) on heroku.
+We will be using **react native** (frontend) with **typescript** (language) to develop a cross-platform app supported by a **flask** (backend) with **postgres** (database) on heroku.
 
 ## Considerations
 **How should we deal with tabular data? (especially for for exercise tracking)**
 - Are there specific features that we want to input in each cell?
-  - if so, should we make those features generic (user settable) to allow for other uses 
+  - if so, should we make those features generic (user settable) to allow for other uses
 
 **What should we use to render the markdown for notes?**
 - for users not familar with markdown, should we also offer gui formatting menu for lists, checkboxes etc? (md can be hard to write on phone)
-- the libarry we use for markdown has to be fast since we should refresh at every word. 
-  - can we find patterns on where to refresh? 
+- the libarry we use for markdown has to be fast since we should refresh at every word.
+  - can we find patterns on where to refresh?
   - is there a way to refresh the markdown partially/ avoid the user screen flashing when we refresh the document?
 
-**Should we create extra functions dedicated to exercise mode?** 
+**Should we create extra functions dedicated to exercise mode?**
 - calculations, statistics etc
 - Or we could also allow users to create 'templates' of calculations, (like excel formula) and provide the users with some pre-set configurations? (exercise pattern, eating habits, sleeping habits etc)
 
@@ -36,13 +37,13 @@ We will be using **react native** (frontend) to develop a cross-platform app sup
 - we can also consider syncing through dropbox/google cloud, but that might require 'authentication' from user every time.
 
 **THE APP SHOULD WORK OFFLINE**
-- we need to download the entire data on startup and keep it in our cache. 
+- we need to download the entire data on startup and keep it in our cache.
 - For now, since we are developing the frontend only we can store the note as a json file or something instead of making requests
 
 ## Design
 - The application should be a single page app with a side menu.
 - The main screen will always be showing a 'note' (unless in setting or user page). If there is none, a new note screen will show
-- The user can use the side menu to choose a note to render. 
+- The user can use the side menu to choose a note to render.
 - The side menu will show the notes in a tree view, as well as user account icon and general settings button
 - When showing the note, we will show different menu for markdown type or tabular type.
 
@@ -97,3 +98,4 @@ i'll try to make the rendering later
 [setting up react native with yarn](https://reactnative.dev/docs/environment-setup)
 [what is markdown](https://www.markdownguide.org/getting-started/)
 [what is react](https://www.w3schools.com/whatis/whatis_react.asp) &larr; still relevant because react native is a child of react!
+[what is typescript](https://stackoverflow.com/questions/12694530/what-is-typescript-and-why-would-i-use-it-in-place-of-javascript)
