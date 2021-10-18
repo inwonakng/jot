@@ -19,3 +19,7 @@ if you don't have yarn,
 
 
 [running on your device](https://reactnative.dev/docs/running-on-device)
+
+
+### Development guid
+[devguide.md](devguide.md)
